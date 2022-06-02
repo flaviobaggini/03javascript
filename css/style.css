@@ -1,0 +1,40 @@
+.ticketek {
+    margin: auto;
+    width: 50rem;
+    text-align: center;
+}
+.descuento {
+font-weight: 700;
+font-size: 110%;
+
+}
+.pietarj {
+font-size: 80%;
+color: grey;
+}
+
+.ventatxt {
+    font-size: 70%;
+}
+
+.valortxt {
+    font-size: 200%;
+    font-weight: 600;
+}
+
+.total {
+    background-color: #cce5ff;
+    padding: 1rem;
+    text-align: left;
+    color: #003fa5  ;
+}
+
+.btntickets {
+    background-color: #97c93e;
+    border: none;
+    color: white;
+    font-weight: 200;
+    padding: .5rem;
+    width: 10rem;
+    border-radius: .3rem;
+}
