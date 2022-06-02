@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="us">
+
+<head>
+    <!-- meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link a hoja de estilop CSS-->
+    <link rel="stylesheet" href="css/style.css">
+
+    <title> Trabajo Práctico Integrador HTML, CSS, Bootstrap </title>
+
+    <!-- Declaración de formulario -->
+    <formulario class="html"></formulario>
+    <form action=""></form>
+
+    <!-- Bootstrap CSS v5.0.2 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+</head>
+
+
+<body>
+    <!-- Barra Titulos-->
+
+    <nav class="navbar  navbar-dark bg-dark bg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" style="font-size:22pt">
+                <img src="images/codoacodo.png" alt="" width="35%" height="35%"
+                    class="d-inline-block align-text-center">
+                Conf BsAs
+            </a>
+
+            <ul class="nav justify-content-end">
+                <li class="nav-item">
+                    <a class="nav-link" style="color: white; font-size: large;" aria-current="page" href="#"> La
+                        conferencia</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="color: grey;" href="#">Los oradores</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="color: grey;" href="#">El lugar y la fecha</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="color: grey;" href="#">Conviérte en orador </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="color: green;" href="#">Comprar tickets</a>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+ <div class="ticketek">
+
+    <!-- tarjetas -->
+
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+            <div class="card h-100 border-primary mb-3">
+                <div class="card-body">
+                    <h5 class="card-title"> Estudiante </h5>
+                    <p class="card-text"> Tiene un descuento </p>
+                    <p class="descuento"> 80% </p>
+                    <p class="pietarj">*presentar documentación </p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 border-success mb-3">
+                <div class="card-body">
+                    <h5 class="card-title"> Trainee </h5>
+                    <p class="card-text"> Tiene un descuento </p>
+                    <p class="descuento"> 50% </p>
+                    <p class="pietarj">*presentar documentación </p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 border-warning mb-3">
+                <div class="card-body">
+                    <h5 class="card-title"> Junior </h5>
+                    <p class="card-text"> Tiene un descuento </p>
+                    <p class="descuento"> 15% </p>
+                    <p class="pietarj"> *presentar documentación </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+
+    <!-- Formulario -->
+    <div class="container">
+        <div class="lead text-center my-3"> 
+            <p class="ventatxt"> VENTA </p>
+            <p class="valortxt"> VALOR DEL TICKET $200 </p>
+            </div>
+
+        <form action="contacto/mostrarVariablesSubmit.html" method="post">
+            <div class="row">
+                <div class="col-md mb-3">
+                    <input type="text" name="nombre" id="nombre" placeholder="Nombre" class="form-control">
+                </div>
+                <div class="col-md mb-3">
+                    <input type="text" name="apellido" id="apellido" placeholder="Apellido" class="form-control">
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md mb-3">
+                    <input type="email" name="email" id="email" placeholder="Correo" class="form-control">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md mb-3">
+                    <input type="text" name="cant" id="cant" placeholder="Cantidad" class="form-control"
+                        onkeyup="calcularTotal()">
+                </div>
+                <div class="col-md mb-3">
+                    <select class="form-select" aria-label="Default select example" id="categoria"
+                        onchange="calcularTotal()">
+                        <option value="1" selected>Estudiante</option>
+                        <option value="2">Trainee</option>
+                        <option value="3">Junior</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="total">
+                    Total a Pagar: $ <span id="total"></span>
+                </div>
+            </div>
+<br>
+            <div class="row">
+                <div class="col-md mb-3">
+                    <input type="reset" value="Limpiar" class="btntickets">
+                </div>
+                <div class="col-md mb-3">
+                    <input type="button" value="Calcular" onclick="calcularTotal()" class="btntickets">
+                </div>
+                <div class="col-md mb-3">
+                    <input type="submit" value="Enviar" class="btntickets">
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+    <!--Pie de página -->
+    <nav class="navbar" style="background-color: #1e5170; background: linear-gradient(to right, #1c3643, #1e5372);">
+        <div class="container-fluid justify-content-center">
+
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link" style="color: white;" aria-current="page" href="#">Preguntas frecuentes </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="color: white;" href="#">Contáctanos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="color: white;" href="#">Prensa</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="color: white;" href="#">Conferencias</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="color: white;" href="#">Terminos y condiciones</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="color: white;" href="#">Privacidad</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="color: white;" href="#">Estudiantes</a>
+                </li>
+
+            </ul>
+        </div>
+
+
+    </nav>
+
+
+
+ </div>   
+
+
+
+
+
+
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+
+
+
+        <script src="js/main.js"></script>    
+
+</body>
+
+</html>
